@@ -1,6 +1,6 @@
 clc;
 clear;
-load('Trained_Network_XOR.mat');
+load('Trained_Network_OR.mat');
 
 input = [0 0 ;
          1 1;
@@ -11,5 +11,7 @@ input = [0 0 ;
  A1 = logsig(Z1);
  Z2 = W2 *A1;        
  Y = logsig(Z2);
+ 
  disp(Y);
+ disp(Y>0.5);
  
